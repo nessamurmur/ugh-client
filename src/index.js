@@ -1,33 +1,15 @@
 var version = require('../package.json').version
 var program = require('commander');
 var moment = require('moment');
-var shell = require('shelljs');
-var fs = require('fs');
+var nconf = require('nconf');
 
-function removeConfigFile(fileName) {
-    shell.rm(fileName);
-}
-
-function writeConfigFile(fileName, config) {
-    var contents = JSON.stringify(config);
-    fs.writeFile(fileName, contents, function(err, written, buffer) {
-        if (!err) {
-            console.log("Config written!")
-        }
-    });
-}
+nconf.use('file', { file: process.env.HOME + '/.ughconfig.json' });
+nconf.load();
 
 function configure(option, value) {
-    var fileName = 'config.json'
-
-    if (shell.test('-e', fileName)) {
-        var config = require('../' + fileName);
-        removeConfigFile(fileName);
-    } else {
-        var config = {};
-    }
-    config[option] = value;
-    writeConfigFile(fileName, config);
+    nconf.set(option, value);
+    nconf.save();
+    console.log("Set " + option + " to " + value);
 };
 
 program
