@@ -1,0 +1,16 @@
+{
+  "name": "ugh-client",
+  "version": "1.0.0",
+  "description": "A client for Ugh",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nate West",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "moment": "^2.11.1",
+    "shelljs": "^0.5.3"
+  }
+}
