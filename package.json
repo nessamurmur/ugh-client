@@ -1,6 +1,6 @@
 {
   "name": "ugh-client",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A client for Ugh",
   "main": "src/index.js",
   "scripts": {
@@ -13,5 +13,8 @@
     "moment": "^2.11.1",
     "nconf": "^0.8.2",
     "shelljs": "^0.5.3"
+  },
+  "bin": {
+    "ugh": "src/index.js"
   }
 }
