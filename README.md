@@ -14,7 +14,7 @@ Next, configure the client to point to the URL for
 the ugh server:
 
 ``` bash
-ugh configure ughUrl http://yoururl.com
+ugh configure issuesUrl http://yoururl.com/issues
 ```
 
 ## Usage
