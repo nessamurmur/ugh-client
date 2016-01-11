@@ -1,6 +1,6 @@
 {
   "name": "ugh-client",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "A client for Ugh",
   "main": "src/index.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "commander": "^2.9.0",
     "moment": "^2.11.1",
     "nconf": "^0.8.2",
+    "node-uuid": "^1.4.7",
     "promptly": "^1.0.0",
     "request": "^2.67.0",
     "shelljs": "^0.5.3"
