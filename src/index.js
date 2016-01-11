@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var version = require('../package.json').version
 var program = require('commander');
 var moment = require('moment');
